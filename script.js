@@ -39,7 +39,11 @@ nineBoxes.forEach((box) => {
             playerO = true;
         }
         box.disabled = true;
-        winner();
+        let someWin=winner();
+        if (!someWin){
+            checkDraw();
+        }
+        
     })
 
 });
@@ -55,7 +59,7 @@ const winner = () => {
                 console.log('x y z', x, y, z)
                 console.log('elements', elements);
                 [0, 1, 2].forEach(element => {
-                    nineBoxes[elements[element]].style.backgroundColor = 'red';
+                    nineBoxes[elements[element]].style.borderColor = 'red';
                 });
                 para.innerText = `winner! ${x == 'O'? 'Player 1': 'Player 2'}`
                 console.log(para.innerText)
@@ -63,6 +67,7 @@ const winner = () => {
     }
     
     }
+    
 }
 
 resetbtn.addEventListener("click", () => {
@@ -70,8 +75,38 @@ resetbtn.addEventListener("click", () => {
         eachBox.innerText = "";
         eachBox.disabled = false;
         playerO = true;
-        eachBox.style.backgroundColor="";
+        eachBox.style.borderColor="";
     }
     para.innerText = "Player-1 turn!";
 
 });
+// const checkDraw = () => {
+//     let allFilled = true;
+
+//     for (let i = 0; i < nineBoxes.length; i++) {
+//         if (nineBoxes[i].innerText === "") {
+//             allFilled = false;
+//             break;
+//         }
+//     }
+
+//     if (allFilled) {
+//         para.innerText = "It's a draw!";
+//         console.log("It's a draw!");
+//     }
+// };
+const checkDraw=()=>{
+    let boxFilled=true;
+   
+    for (i=0;i<9;i++){
+        if (nineBoxes[i].innerText===""){
+            boxFilled=false;
+            break;
+        
+        }
+    }
+     if (boxFilled){
+        console.log("draw");
+        para.innerText="It's a draw! start again";
+    }
+}
