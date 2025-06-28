@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+
+<body>
+    <div class="flex flex-col justify-center items-center bg-gradient-to-b from-purple-600 from-30% via-blue-600 to-cyan-600 h-full w-full"
+        id="container">
+        <h3 class="font-bold text-2xl mb-10 pt-2" id="head">Tic-Tac-Toe</h3>
+        <button class="border mb-2 p-3 hover:cursor-pointer hover:bg-purple-800 start">START GAME</button>
+        <p class="hide, text-2xl font-bold mb-10"></p>
+        <div class="relative h-[360px] w-[360px] mx-auto mt-10">
+            <!-- Line container -->
+            <!-- <div id="win-line" class="absolute top-0 left-0 bg-black w-1 h-1 pointer-events-none"></div> -->
+
+
+            <!-- Tic Tac Toe grid -->
+            <div class="grid grid-cols-3 gap-2">
+                <!-- <div class="hzl border-t-2 border-gray-800"></div>
+                <div class="vl ml-15 h-30 border-l-2 border-gray-800"></div> -->
+                <button class="box h-28 w-28 border border-black rounded-xl shadow-xl text-5xl font-bold"></button>
+                <button class="box h-28 w-28 border border-black rounded-xl shadow-xl text-5xl font-bold"></button>
+                <button class="box h-28 w-28 border border-black rounded-xl shadow-xl text-5xl font-bold"></button>
+                <button class="box h-28 w-28 border border-black rounded-xl shadow-xl text-5xl font-bold"></button>
+                <button class="box h-28 w-28 border border-black rounded-xl shadow-xl text-5xl font-bold"></button>
+                <button class="box h-28 w-28 border border-black rounded-xl shadow-xl text-5xl font-bold"></button>
+                <button class="box h-28 w-28 border border-black rounded-xl shadow-xl text-5xl font-bold"></button>
+                <button class="box h-28 w-28 border border-black rounded-xl shadow-xl text-5xl font-bold"></button>
+                <button class="box h-28 w-28 border border-black rounded-xl shadow-xl text-5xl font-bold"></button>
+            </div>
+        </div>
+
+        <!-- <div class="h-100 w-100  flex justify-center flex-wrap">
+            <button
+                class="h-30 w-30 m-1 border border-black hover:cursor-pointer rounded-xl shadow-xl font-bold text-5xl , box"></button>
+            <button
+                class="h-30 w-30 m-1 border border-black hover:cursor-pointer rounded-xl shadow-xl font-bold text-5xl , box"></button>
+            <button
+                class="h-30 w-30 m-1 border border-black hover:cursor-pointer rounded-xl shadow-xl font-bold text-5xl , box"></button>
+            <button
+                class="h-30 w-30 m-1 border border-black hover:cursor-pointer rounded-xl shadow-xl font-bold text-5xl , box"></button>
+            <button
+                class="h-30 w-30 m-1 border border-black hover:cursor-pointer rounded-xl shadow-xl font-bold text-5xl , box"></button>
+            <button
+                class="h-30 w-30 m-1 border border-black hover:cursor-pointer rounded-xl shadow-xl font-bold text-5xl , box"></button>
+            <button
+                class="h-30 w-30 m-1 border border-black hover:cursor-pointer rounded-xl shadow-xl font-bold text-5xl , box"></button>
+            <button
+                class="h-30 w-30 m-1 border border-black hover:cursor-pointer rounded-xl shadow-xl font-bold text-5xl , box"></button>
+            <button
+                class="h-30 w-30 m-1 border border-black hover:cursor-pointer rounded-xl shadow-xl font-bold text-5xl , box"></button>
+        </div> -->
+        <button class="border mt-20 mb-10 p-3 hover:cursor-pointer hover:bg-blue-500 mb-25, reset">RESET</button>
+    </div>
+
+</body>
+<script src="script.js"></script>
+
+</html>
